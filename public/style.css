@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+}
+
+.container form {
+  padding: 1em;
+  background: #b3e6ff;
+  border-radius: 1em;
+  border: none;
+  line-height: 1.7em;
+  -webkit-box-shadow: 5px 2px 50px #99ddff;
+          box-shadow: 5px 2px 50px #99ddff;
+}
+
+.container form label {
+  color: #929292;
+  font-size: 1em;
+}
+
+.container form input {
+  width: 15em;
+  height: 1.8em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  border-radius: 1em;
+  font-size: 1em;
+  opacity: 0.9;
+  outline: none;
+  border: none;
+}
+
+.container form input[type=text] {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container form h1 {
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+}
+
+.container .btn {
+  padding: 0.6em;
+  border: none;
+  border-radius: 1em;
+  margin-top: 1em;
+  width: 15em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  border: none;
+  background: #ff6699;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .btn:hover {
+  -webkit-box-shadow: 5px 2px 20px #ff6699;
+          box-shadow: 5px 2px 20px #ff6699;
+}
+
+nav {
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .logo {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+nav .logo a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #f84ab0;
+  letter-spacing: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav .navi ul {
+  list-style: none;
+}
+
+nav .navi ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav .navi ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  padding: 0.3em;
+  border-radius: 1em;
+  width: 3em;
+  font-family: 'Poppins', sans-serif;
+  background: #ff6699;
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: #ff6699;
+}
+
+section .containers {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .containers .left {
+  margin-left: 10em;
+}
+
+section .containers .left h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #2c2b2c;
+  line-height: 1.4em;
+}
+
+section .containers .left .blue {
+  color: #f84ab0;
+}
+
+section .containers .left p {
+  font-size: 1.2sem;
+}
+
+section .containers .left .lets a {
+  padding: 0.4em;
+  width: 13em;
+  background: #4a64f8;
+  border-radius: 1.3em;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+section .containers .right svg {
+  margin-right: 10em;
+  width: 40em;
+  height: 30em;
+}
+
+.cls-1 {
+  fill: #ffc541;
+}
+
+.cls-2 {
+  fill: #4e4066;
+}
+
+.cls-3 {
+  fill: #6f5b92;
+}
+
+.cls-4 {
+  fill: #f78d5e;
+}
+
+.cls-5 {
+  fill: #fa976c;
+}
+
+.cls-6,
+.cls-7,
+.cls-8 {
+  fill: #b65c32;
+}
+
+.cls-10,
+.cls-6 {
+  opacity: 0.6;
+}
+
+.cls-7 {
+  opacity: 0.4;
+}
+
+.cls-9 {
+  fill: #f4b73b;
+}
+
+.cls-11 {
+  fill: #f9c358;
+}
+
+.cls-12 {
+  fill: #9b462c;
+}
+
+.cls-13 {
+  fill: #aa512e;
+}
+
+.cls-14 {
+  fill: #7d6aa5;
+}
+
+/* animations */
+.wheel {
+  -webkit-animation: wheel-rotate 6s ease infinite;
+          animation: wheel-rotate 6s ease infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes wheel-rotate {
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+  100% {
+    -webkit-transform: rotate(960deg);
+            transform: rotate(960deg);
+  }
+}
+
+@keyframes wheel-rotate {
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+  100% {
+    -webkit-transform: rotate(960deg);
+            transform: rotate(960deg);
+  }
+}
+
+.clock-hand-1 {
+  -webkit-animation: clock-rotate 3s linear infinite;
+          animation: clock-rotate 3s linear infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+.clock-hand-2 {
+  -webkit-animation: clock-rotate 6s linear infinite;
+          animation: clock-rotate 6s linear infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes clock-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes clock-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#box-top {
+  -webkit-animation: box-top-anim 2s linear infinite;
+          animation: box-top-anim 2s linear infinite;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes box-top-anim {
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes box-top-anim {
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+#umbrella {
+  -webkit-animation: umbrella-anim 6s linear infinite;
+          animation: umbrella-anim 6s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes umbrella-anim {
+  25% {
+    -webkit-transform: translateY(10px) rotate(5deg);
+            transform: translateY(10px) rotate(5deg);
+  }
+  75% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes umbrella-anim {
+  25% {
+    -webkit-transform: translateY(10px) rotate(5deg);
+            transform: translateY(10px) rotate(5deg);
+  }
+  75% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+#cup {
+  -webkit-animation: cup-rotate 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+          animation: cup-rotate 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes cup-rotate {
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes cup-rotate {
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+#pillow {
+  -webkit-animation: pillow-anim 3s linear infinite;
+          animation: pillow-anim 3s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes pillow-anim {
+  25% {
+    -webkit-transform: rotate(10deg) translateY(5px);
+            transform: rotate(10deg) translateY(5px);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes pillow-anim {
+  25% {
+    -webkit-transform: rotate(10deg) translateY(5px);
+            transform: rotate(10deg) translateY(5px);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+#stripe {
+  -webkit-animation: stripe-anim 3s linear infinite;
+          animation: stripe-anim 3s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes stripe-anim {
+  25% {
+    -webkit-transform: translate(10px, 0) rotate(-10deg);
+            transform: translate(10px, 0) rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes stripe-anim {
+  25% {
+    -webkit-transform: translate(10px, 0) rotate(-10deg);
+            transform: translate(10px, 0) rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+#bike {
+  -webkit-animation: bike-anim 6s ease infinite;
+          animation: bike-anim 6s ease infinite;
+}
+
+@-webkit-keyframes bike-anim {
+  0% {
+    -webkit-transform: translateX(-1300px);
+            transform: translateX(-1300px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  100% {
+    -webkit-transform: translateX(1300px);
+            transform: translateX(1300px);
+  }
+}
+
+@keyframes bike-anim {
+  0% {
+    -webkit-transform: translateX(-1300px);
+            transform: translateX(-1300px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  100% {
+    -webkit-transform: translateX(1300px);
+            transform: translateX(1300px);
+  }
+}
+
+#rucksack {
+  -webkit-animation: ruck-anim 3s linear infinite;
+          animation: ruck-anim 3s linear infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes ruck-anim {
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes ruck-anim {
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+.circle {
+  -webkit-animation: circle-anim ease infinite;
+          animation: circle-anim ease infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+  -webkit-perspective: 0px;
+          perspective: 0px;
+}
+
+.circle.c1 {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.circle.c2 {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.circle.c3 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.circle.c4 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.circle.c5 {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.circle.c6 {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes circle-anim {
+  50% {
+    -webkit-transform: scale(0.2) rotateX(360deg) rotateY(360deg);
+            transform: scale(0.2) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes circle-anim {
+  50% {
+    -webkit-transform: scale(0.2) rotateX(360deg) rotateY(360deg);
+            transform: scale(0.2) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.four,
+#ou {
+  -webkit-animation: four-anim cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+          animation: four-anim cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+
+.four.a {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transform-box: fill-box;
+}
+
+.four.b {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transform-box: fill-box;
+}
+
+#ou {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes four-anim {
+  50% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+}
+
+@keyframes four-anim {
+  50% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Register</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="/">BLACK</a>
+      </div>
+    <div class="link">
+      <ul>
+        <li><a href="/login">Sign In</a></li>
+        <li><a href="/register" class="active">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container">
+      <form class="form">
+        <h1>Sign Up</h1>
+        
+        <label class="laber">Firstname</label><br>
+      <input type="text" class="firstname" name="firstname"><br>
+      <div class="first error"></div>
+      <label class="laber">Lastname</label><br>
+      <input type="text" class="lastname" name="lastname"><br>
+      <div class="last error"></div>
+      <label class="laber">Email</label><br>
+      <input type="text" class="username" name="username"><br>
+      <div class="user error"></div>
+      <label class="laber">Password</label><br>
+      <input type="password" class="password" name="Password" required><br>
+      <div class="pwd error"></div>
+      <button class="btn">Register</button>
+    </form>
+  </div>
+<script>
+  const form = document.querySelector('.form');
+  // const userf = document.querySelector('.firstname');
+  // const userl = document.querySelector('.lastname');
+  // const usere = document.querySelector('.username');
+  const errorfDOM = document.querySelector('.first.error');
+  const errorlDOM = document.querySelector('.last.error');
+  const erroruDOM = document.querySelector('.user.error');
+  const errorpDOM = document.querySelector('.pwd.error');
+  // const errorlasDOM = document.querySelector('.pwdl.error');
+  form.addEventListener('submit', async (e) =>{
+    e.preventDefault()
+    const firstname = document.querySelector('.firstname').value
+    const lastname = document.querySelector('.lastname').value
+    const username = document.querySelector('.username').value
+    const password = document.querySelector('.password').value
+    errorfDOM.textContent = ''
+    errorlDOM.textContent = ''
+    erroruDOM.textContent = ''
+    errorpDOM.textContent = ''
+    // errorlasDOM.textContent = ''
+if(firstname == ''){
+  errorfDOM.textContent = "Please fill your first name"
+}
+if(lastname == ''){
+  errorlDOM.textContent = "Please fill your last name"
+}
+if(username == ''){
+  erroruDOM.textContent = "Please put your email"
+}
+if(password === ''){
+  errorpDOM.textContent = "Please put password"
+}
+// if(password < 6){
+//   errorlasDOM.textContent = "Password must atleast 5 characters"
+// }
+    try {
+      const result = await fetch('/api/v1/register', {
+        method: 'POST',
+       headers: {'Content-Type': 'application/json'},
+       body: JSON.stringify({firstname, lastname, username, password})
+      })
+      const data = await result.json()
+      if(data.error){
+        erroruDOM.textContent = data.error.username
+      }
+      if(data.id){
+        // errorlDOM.textContent = data.id
+        location.assign('/next')
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+  })
+</script>
+  
+</body>
+</html>
